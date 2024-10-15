@@ -40,13 +40,14 @@
         nav a {
             display: block;
             padding: 15px 20px;
-            color: #333333;
-            text-decoration: none;
-            transition: background-color 0.3s;
+            color: grey; /* Change link color to grey */
+            text-decoration: none; /* Remove underline */
+            transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
         }
 
         nav a:hover {
             background-color: rgba(209, 186, 186, 0.7);
+            color: darkgrey; /* Change link color on hover */
         }
 
         section {
@@ -65,11 +66,11 @@
         }
 
         h3 {
-                color: #fbdfdf;
-                border-bottom: 2px solid rgba(255, 255, 255, 0.9);
-                padding-bottom: 10px;
-                margin-bottom: 20px;
-            }
+            color: #fbdfdf;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
 
         b {
             color: #fbdfdf;
@@ -77,13 +78,27 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
             font-weight: normal; /* Make the font non-bold */
+            font-size: 20px;
         }
 
         /* Paragraph style */
         p {
+            font-size: 20px; /* Set a specific size for paragraphs */
             color: #fbdfdf;
             text-align: justify;
             margin-top: 20px;
+        }
+
+        /* Links inside paragraph */
+        p a {
+            color: grey; /* Change link color to grey inside paragraph */
+            text-decoration: none;
+            transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+        }
+
+        p a:hover {
+            color: darkgrey; /* Change link color on hover inside paragraph */
+            text-decoration: underline; /* Optional underline on hover */
         }
 
         .research-cards {
@@ -129,7 +144,7 @@
                 font-size: 1em;
             }
 
-        /* Stack nav links vertically on smaller screens */
+            /* Stack nav links vertically on smaller screens */
             nav ul {
                 flex-direction: column;
             }
@@ -138,7 +153,7 @@
                 padding: 10px;
             }
 
-        /* Stack research cards vertically on small screens */
+            /* Stack research cards vertically on small screens */
             .research-cards {
                 flex-direction: column;
             }
@@ -167,23 +182,27 @@
     </header>
 
     <section style="text-align: center;">
-        <img src="images/about_size1C.jpg" class="img-fluid" alt="">
-		<h2>PhD Student, Department Of Physics IIT Kharagpur<br />
+        <img src="images/about_size1C.jpg" class="img-fluid" alt="" style="margin-bottom: 20px;"> <!-- Added margin-bottom to create vertical space -->
+
+        <br>
+        <b>
+            <a href="https://www.linkedin.com/in/sabyasachi-chakraborty-8b6404192/">
+                <img src="images/lnkdn.png">
+            </a>
+            <a href="https://www.researchgate.net/profile/Sabyasachi-Chakraborty-11">
+                <img src="images/rsgate.png">
+            </a>
+            <a href="https://scholar.google.com/">
+                <img src="images/gsch.png">
+            </a>
+            <a href="https://orcid.org/0009-0001-8084-0565">
+                <img src="images/orcid.png">
+            </a>  
+        </b>
+        
+
+        <h2>PhD Student, Department Of Physics IIT Kharagpur<br />
             Prime Minister Research Fellow</h2>
-		<b>
-			<a href="https://www.linkedin.com/in/sabyasachi-chakraborty-8b6404192/">
-				<img src="images/lnkdn.png">
-			</a>
-			<a href="https://www.researchgate.net/profile/Sabyasachi-Chakraborty-11">
-				<img src="images/rsgate.png">
-			</a>
-			<a href="https://scholar.google.com/">
-				<img src="images/gsch.png">
-			</a>
-			<a href="https://orcid.org/0009-0001-8084-0565">
-				<img src="images/orcid.png">
-			</a>	
-		</b>
 
         <!-- Justified paragraph without bold -->
         <p>
@@ -196,8 +215,9 @@
             behaviours within the driven Bose-Hubbard framework and developing efficient quantum 
             circuits for simulating complex many-body Hamiltonians on NISQ systems.
         </p>
-        <hr style="border-color: rgba(0, 0, 0, 0.7);border-width: 1.5px;"> <!-- Red horizontal line -->	
-	</section>
+
+        <hr style="border-color: rgba(0, 0, 0, 0.7);border-width: 1.5px;"> <!-- Red horizontal line -->    
+    </section>
     
 
     <footer>
