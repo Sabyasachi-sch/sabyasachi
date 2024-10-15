@@ -30,6 +30,7 @@
             display: flex;
             justify-content: center;
             background-color: #FFFFFF;
+            flex-wrap: wrap; /* Wrap navigation items on smaller screens */
         }
 
         nav li {
@@ -62,6 +63,13 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
+
+        h3 {
+                color: #fbdfdf;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
 
         b {
             color: #fbdfdf;
@@ -99,6 +107,45 @@
             padding: 20px;
             background-color: #000000; /* Black background */
             color: #FFFFFF; /* White text color */
+        }
+
+        img {
+            max-width: 100%; /* Ensure images scale to fit the screen */
+            height: auto;
+        }
+
+        /* Responsive Styles for Smaller Screens */
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+        /* Stack nav links vertically on smaller screens */
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 10px;
+            }
+
+        /* Stack research cards vertically on small screens */
+            .research-cards {
+                flex-direction: column;
+            }
+
+            .research-card {
+                width: 100%;
+            }
         }
     </style>
 </head>

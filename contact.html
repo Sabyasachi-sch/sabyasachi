@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sabyasachi Chakraborty - Physics</title>
@@ -30,6 +30,7 @@
             display: flex;
             justify-content: center;
             background-color: #FFFFFF;
+            flex-wrap: wrap; /* Wrap navigation items on smaller screens */
         }
 
         nav li {
@@ -52,36 +53,27 @@
             padding: 40px;
             background-color: rgba(0, 0, 0, 0.7); /* Slight transparency */
             margin: 20px;
-            border-radius: 1px;
-            box-shadow: 0px 4px 6px rgba(252, 240, 240, 0.1);
-            border: 4px solid rgb(90, 84, 84); /* Broader white border */
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        
         h2 {
-            color: #ffffff;
+            color: #fbdfdf;
             border-bottom: 2px solid rgba(255, 255, 255, 0.9);
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
 
         h3 {
-            color: #ffffff;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.9);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        h4 {
-            color: #ffffff;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.9);
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
+                color: #fbdfdf;
+                border-bottom: 2px solid rgba(255, 255, 255, 0.9);
+                padding-bottom: 10px;
+                margin-bottom: 20px;
+            }
 
         b {
-            color: #ffffff;
-            border-bottom: 2px solid rgba(0, 0, 0, 0.9);
+            color: #fbdfdf;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.9);
             padding-bottom: 10px;
             margin-bottom: 20px;
             font-weight: normal; /* Make the font non-bold */
@@ -89,7 +81,7 @@
 
         /* Paragraph style */
         p {
-            color: #ffffff;
+            color: #fbdfdf;
             text-align: justify;
             margin-top: 20px;
         }
@@ -115,6 +107,45 @@
             padding: 20px;
             background-color: #000000; /* Black background */
             color: #FFFFFF; /* White text color */
+        }
+
+        img {
+            max-width: 100%; /* Ensure images scale to fit the screen */
+            height: auto;
+        }
+
+        /* Responsive Styles for Smaller Screens */
+        @media (max-width: 768px) {
+            section {
+                padding: 20px;
+                margin: 10px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            p {
+                font-size: 1em;
+            }
+
+        /* Stack nav links vertically on smaller screens */
+            nav ul {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 10px;
+            }
+
+        /* Stack research cards vertically on small screens */
+            .research-cards {
+                flex-direction: column;
+            }
+
+            .research-card {
+                width: 100%;
+            }
         }
     </style>
 </head>
